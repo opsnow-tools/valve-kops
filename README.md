@@ -14,13 +14,13 @@ kops 명령을 사용해서 쿠버네티스 클러스터 설치를 돕는 CUI �
 
 * kops를 통한 쿠버네티스 설치
 * kops 클러스터 운영
-** Get Cluster
-** Edit Cluster
-** Update Cluster
-** Rolling Update
-** Validate Cluster
-** Export Kube Config
-** Change SSH key
+  * Get Cluster
+  * Edit Cluster
+  * Update Cluster
+  * Rolling Update
+  * Validate Cluster
+  * Export Kube Config
+  * Change SSH key
 
 ## 사용 방법
 
