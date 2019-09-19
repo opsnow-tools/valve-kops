@@ -1,5 +1,0 @@
-replicaCount: 1
-image:
-  repository: istio/fortio
-  tag: latest_release
-  pullPolicy: Always
