@@ -200,10 +200,10 @@ else
     #     KOPS="${VERSION}"
     # fi
 
-    curl -LO https://s3.cn-north-1.amazonaws.com.cn/kops-bjs/fileRepository/kops/1.12.0/${OS_NAME}/amd64/kops -o kops
+    curl -LO https://s3.cn-north-1.amazonaws.com.cn/kops-bjs/fileRepository/kops/1.12.1/${OS_NAME}/amd64/kops -o kops
     chmod +x kops && sudo mv kops /usr/local/bin/kops
 
-    KOPS="1.12.0"
+    KOPS="1.12.1"
 fi
 
 kops version 2>&1 | grep Version | xargs | awk '{print $2}'
