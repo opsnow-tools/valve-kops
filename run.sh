@@ -348,6 +348,7 @@ create_menu() {
 
             hint_istio
             hint_cluster_autoscaler
+            hint_china_mirrors
 
             press_enter
 
@@ -361,7 +362,9 @@ create_menu() {
 
             kops_create
 
+            hint_istio
             hint_cluster_autoscaler
+            hint_china_mirrors
 
             press_enter
 
@@ -403,6 +406,19 @@ hint_cluster_autoscaler() {
     echo "  cloudLabels:"
     echo "    k8s.io/cluster-autoscaler/enabled: \"\""
     echo "    kubernetes.io/cluster/${KOPS_CLUSTER_NAME}: owned"
+}
+
+hint_china_mirrors() {
+    _result "Edit Cluster for China Region"
+
+    echo "spec:"
+    echo "  assets:"
+    echo "    containerRegistry: 937788672844.dkr.ecr.cn-north-1.amazonaws.com.cn"
+    echo "    fileRepository: https://s3.cn-north-1.amazonaws.com.cn/kops-bjs/fileRepository/"
+    echo "  docker:"
+    echo "    logDriver: \"\""
+    echo "    registryMirrors:"
+    echo "        - https://registry.docker-cn.com"
 }
 
 get_kops_cluster() {
