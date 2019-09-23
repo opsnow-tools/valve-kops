@@ -580,6 +580,7 @@ kops_create() {
     echo "    --cloud=${cloud} "                 >> ${KOPS_CREATE}
     echo "    --name=${KOPS_CLUSTER_NAME} "      >> ${KOPS_CREATE}
     echo "    --state=s3://${KOPS_STATE_STORE} " >> ${KOPS_CREATE}
+    echo "    --image=ami-02dd4d384eb0e0b3a"     >> ${KOPS_CREATE}
 
     [ -z ${master_size} ]  || echo "    --master-size=${master_size} "   >> ${KOPS_CREATE}
     [ -z ${master_count} ] || echo "    --master-count=${master_count} " >> ${KOPS_CREATE}
@@ -590,7 +591,6 @@ kops_create() {
     [ -z ${networking} ]   || echo "    --networking=${networking} "     >> ${KOPS_CREATE}
     [ -z ${topology} ]     || echo "    --topology=${topology} "         >> ${KOPS_CREATE}
     [ -z ${dns_zone} ]     || echo "    --dns-zone=${dns_zone} "         >> ${KOPS_CREATE}
-    [ -z ${image} ]        || echo "    --image=ami-02dd4d384eb0e0b3a"   >> ${KOPS_CREATE}
 
     if [ ! -z ${vpc} ]; then
         echo "    --vpc=${vpc} " >> ${KOPS_CREATE}
