@@ -590,6 +590,7 @@ kops_create() {
     [ -z ${networking} ]   || echo "    --networking=${networking} "     >> ${KOPS_CREATE}
     [ -z ${topology} ]     || echo "    --topology=${topology} "         >> ${KOPS_CREATE}
     [ -z ${dns_zone} ]     || echo "    --dns-zone=${dns_zone} "         >> ${KOPS_CREATE}
+    [ -z ${image} ]        || echo "    --image=ami-02dd4d384eb0e0b3a"   >> ${KOPS_CREATE}
 
     if [ ! -z ${vpc} ]; then
         echo "    --vpc=${vpc} " >> ${KOPS_CREATE}
