@@ -201,7 +201,7 @@ else
     # fi
 
     curl -LO https://s3.cn-north-1.amazonaws.com.cn/kops-bjs/fileRepository/kops/1.12.0/${OS_NAME}/amd64/kops -o kops
-    chmod +x kops && sudo mv kops-${OS_NAME}-amd64 /usr/local/bin/kops
+    chmod +x kops && sudo mv kops /usr/local/bin/kops
 
     KOPS="1.12.0"
 fi
