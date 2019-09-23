@@ -167,6 +167,7 @@ cluster_menu() {
 
             hint_istio
             hint_cluster_autoscaler
+            hint_china_mirrors
 
             press_enter cluster
             ;;
@@ -581,6 +582,7 @@ kops_create() {
     echo "    --name=${KOPS_CLUSTER_NAME} "      >> ${KOPS_CREATE}
     echo "    --state=s3://${KOPS_STATE_STORE} " >> ${KOPS_CREATE}
     echo "    --image=ami-02dd4d384eb0e0b3a"     >> ${KOPS_CREATE}
+    echo "    --kubernetes-version=1.12.0"       >> ${KOPS_CREATE}
 
     [ -z ${master_size} ]  || echo "    --master-size=${master_size} "   >> ${KOPS_CREATE}
     [ -z ${master_count} ] || echo "    --master-count=${master_count} " >> ${KOPS_CREATE}
